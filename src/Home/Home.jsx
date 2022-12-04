@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { ByeWorld, HelloWorld } from "../components/HelloWorld";
 import LimitReached from "../components/LimitReached";
+import "./Home.css";
 
 export default function Home() {
   const [Counter, setCounter] = useState(0);
@@ -30,16 +31,18 @@ export default function Home() {
   }
   return (
     <>
-      <h1>Hello World</h1>
-      <HelloWorld text="Hi Bodhi!!!" />
-      <div className="space">
-        <button onClick={increment}>Increase Counter</button>
-        <button onClick={decrement}>Decrease Counter</button>
-        <button onClick={reset}>Reset Counter</button>
+      <div class="home_content">
+        <h1>Hello World</h1>
+        <HelloWorld text="Hi Bodhi!!!" />
+        <div className="space">
+          <button onClick={increment}>Increase Counter</button>
+          <button onClick={decrement}>Decrease Counter</button>
+          <button onClick={reset}>Reset Counter</button>
+        </div>
+        <h1>{Counter}</h1>
+        <ByeWorld comment="Adios Bodhi!!!" />
+        {Counter === 0 && DecClick && <LimitReached />}
       </div>
-      <h1>{Counter}</h1>
-      <ByeWorld comment="Adios Bodhi!!!" />
-      {Counter === 0 && DecClick && <LimitReached />}
     </>
   );
 }

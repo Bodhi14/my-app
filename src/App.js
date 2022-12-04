@@ -9,8 +9,8 @@ export default function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="" component={Home} />
-        <Route path="/contact" component={Contact} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
