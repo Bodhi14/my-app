@@ -3,7 +3,7 @@ export function HelloWorld(props) {
 } // props is treated as the instance or object, just like self in python
 
 export function ByeWorld(props) {
-  return <h3>{props.comment}</h3>;
+  return <h2>{props.comment}</h2>;
 }
 
 // No default function is used here
