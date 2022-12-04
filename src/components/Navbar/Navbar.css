@@ -1,0 +1,12 @@
+.nav_components {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: black;
+}
+
+.nav_text {
+  text-decoration: none;
+  color: antiquewhite;
+}
